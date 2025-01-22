@@ -1,7 +1,12 @@
+import FeatureGrid from "@/components/sections/feature-grid";
+import Hero from "@/components/sections/hero";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="h-[300vh]"></div>
+    <div className="flex flex-col items-center justify-center">
+      <Hero />
+      <FeatureGrid />
+    </div>
   );
 }
