@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import ScrollProvider from "@/providers/scroll-provider";
+import Navigation from "@/components/elements/navigation";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -21,7 +23,10 @@ export default function RootLayout({
       <body
         className={manrope.className}
       >
-        {children}
+        <ScrollProvider>
+          <Navigation />
+          {children}
+        </ScrollProvider>
       </body>
     </html>
   );
