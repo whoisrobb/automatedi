@@ -118,8 +118,8 @@ export function WhyChooseAi() {
               ))}
             </CarouselContent>
             <div className="flex justify-center gap-4 mt-8">
-              <CarouselPrevious className="relative static" />
-              <CarouselNext className="relative static" />
+              <CarouselPrevious className="relative" />
+              <CarouselNext className="relative" />
             </div>
           </Carousel>
         </div>
