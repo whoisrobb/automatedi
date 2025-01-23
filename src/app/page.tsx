@@ -2,7 +2,7 @@ import About from "@/components/sections/about";
 import FeatureGrid from "@/components/sections/feature-grid";
 import Hero from "@/components/sections/hero";
 import Impact from "@/components/sections/impact";
-import Image from "next/image";
+import { WhyChooseAi } from "@/components/sections/Why-choose-ai";
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
       <Hero />
       <FeatureGrid />
       <About />
+      <WhyChooseAi />
       <Impact />
     </div>
   );
