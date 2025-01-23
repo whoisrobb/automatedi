@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import ScrollProvider from "@/providers/scroll-provider";
 import Navigation from "@/components/elements/navigation";
+import Footer from "@/components/sections/footer";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <ScrollProvider>
           <Navigation />
           {children}
+          <Footer />
         </ScrollProvider>
       </body>
     </html>
