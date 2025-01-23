@@ -1,4 +1,5 @@
 import About from "@/components/sections/about";
+import CTASection from "@/components/sections/cta";
 import FeatureGrid from "@/components/sections/feature-grid";
 import Hero from "@/components/sections/hero";
 import Impact from "@/components/sections/impact";
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <WhyChooseAi />
       <Impact />
+      <CTASection />
     </div>
   );
 }
