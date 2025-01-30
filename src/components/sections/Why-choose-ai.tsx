@@ -102,7 +102,7 @@ export function WhyChooseAi() {
                           <p className="text-gray-200 text-sm">{card.description}</p>
                         </div>
                       </div>
-                      <div className="p-6 bg-white">
+                      <div className="p-6 ">
                         <div className="grid grid-cols-3 gap-4">
                           {card.stats.map((stat, idx) => (
                             <div key={idx} className="text-center">

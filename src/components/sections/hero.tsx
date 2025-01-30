@@ -4,6 +4,7 @@ import React from 'react';
 import { TextAnimate } from '../ui/text-animate';
 import { Button } from '../ui/button';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
@@ -14,39 +15,59 @@ const Hero = () => {
             <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(0,0,0,0.07)_1px,transparent_1px)] bg-[size:48px_48px]" />
         </div>
         
-        <div className="lg:max-w-[70rem] grid gap-4 place-items-center">
-            <TextAnimate
-                animation="slideUp"
-                by="word"
-                className='lg:text-6xl md:text-4xl text-lg font-bold'
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="container mx-auto px-6 text-center"
+        >
+            <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="mb-6 text-5xl font-bold tracking-tight text-white md:text-7xl"
             >
-                Connecting, Interacting, Distributing with Intelligence
-            </TextAnimate>
+                Connecting, Interacting,
+                <br />
+                <motion.span
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{
+                    duration: 0.5,
+                    delay: 1,
+                    type: "spring",
+                    stiffness: 100,
+                    }}
+                    className="bg-gradient-to-r from-muted-foreground to-muted-foreground/50 bg-clip-text text-transparent"
+                >
+                    Distributing with Intelligence
+                </motion.span>
+            </motion.h1>
 
-            
-            <TextAnimate
-                animation="fadeIn"
-                by="word"
-                delay={2}
-                duration={0.5}
-                className='lg:max-w-[50rem]'
+            <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="mx-auto mb-12 max-w-3xl text-lg text-gray-300"
             >
-                At Automated Intelligence (Ai), we are revolutionizing how people, communities, businesses,
-                and industries connect, interact, and distribute resources in a digital-first world. By integrating
-                cutting-edge technology solutions, we empower individuals, enhance businesses, and
-                enable sustainable, intelligent communities.
-            </TextAnimate>
-        
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="gap-2 group relative overflow-hidden">
-                    <span className="relative z-10">Get Started</span>
-                    <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
+                At Automated Intelligence (Ai), we are revolutionizing how people, communities, businesses, and industries
+                connect, interact, and distribute resources in a digital-first world.
+            </motion.p>
+
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
+            >
+                <Button size="lg" className="group min-w-[200px]">
+                    Transform with Us <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                 </Button>
-                <Button size="lg" variant="outline" className="group">
+                <Button size="lg" variant="outline">
                     Learn More
                 </Button>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     </div>
   )
 }

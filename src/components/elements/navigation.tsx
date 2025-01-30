@@ -36,7 +36,7 @@ const Navigation = () => {
             visible: { y: 0 }
         }}
     >
-        <nav className='flex items-center space-x-4 bg-foreground text-white px-8 py-2 shadow rounded-full'>
+        <nav className='flex items-center space-x-4 bg-foreground text-background px-8 py-2 shadow rounded-full'>
             <Link href='#' className=''>
                 <Image
                     src='/ai.png'

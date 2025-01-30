@@ -1,4 +1,5 @@
-import About from "@/components/sections/about";
+import { About } from "@/components/sections/about";
+import { BentoGrid } from "@/components/sections/bento-grid";
 import CTASection from "@/components/sections/cta";
 import FeatureGrid from "@/components/sections/feature-grid";
 import Hero from "@/components/sections/hero";
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <FeatureGrid />
       <About />
+      <BentoGrid />
       <WhyChooseAi />
       <Impact />
       <CTASection />

@@ -14,11 +14,10 @@ export default function CTASection() {
         ref={contactRef}
         id='contact'
     >
-      {/* Background Grid Pattern */}
         <div 
-            className="absolute inset-0 opacity-[0.35]" 
+            className="absolute inset-0 opacity-50" 
             style={{
-                backgroundImage: 'linear-gradient(90deg, rgb(var(--foreground) / 0.1) 1px, transparent 0), linear-gradient(rgb(var(--foreground) / 0.1) 1px, transparent 0)',
+                backgroundImage: 'linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 0), linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 0)',
                 backgroundSize: '24px 24px'
             }}
         />
@@ -54,7 +53,7 @@ export default function CTASection() {
             >
                 <Button
                     size="lg"
-                    className="group relative overflow-hidden text-white transition-all"
+                    className="group relative overflow-hidden transition-all"
                 >
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -63,7 +62,7 @@ export default function CTASection() {
                 <Button
                     size="lg"
                     variant="outline"
-                    className="group border-2 transition-all hover:bg-purple-50"
+                    className="group border-2 transition-all"
                 >
                     Learn More
                     <Info className="ml-2 h-4 w-4 transition-transform group-hover:scale-110" />
@@ -77,9 +76,6 @@ export default function CTASection() {
                     <UserPlus className="ml-2 h-4 w-4 transition-transform group-hover:scale-110" />
                 </Button>
             </motion.div>
-
-            {/* Abstract Shape */}
-            <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-[url('https://sjc.microlink.io/d5R4ajuKc49RsB75fWCpJNWiitmbEJ1A4V33dQUCAP7AIGkV5ccGTay82P4fyJd41sv6dSGgVUKwJGkEjwfHUQ.jpeg')] bg-cover bg-center opacity-[0.03]" />
         </div>
     </section>
   )
